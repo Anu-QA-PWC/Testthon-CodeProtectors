@@ -1,0 +1,20 @@
+cd venvExecution of all tests:
+pytest
+
+specific test:
+pytest Tests\\step_definitions\\test_salesforce.py
+
+report generation:
+pytest --html=report.html  --self-contained-html 
+
+parallel execution:
+pytest -n 2 --> (2 worker processes created)
+
+Markers:
+pytest -m smoke -n 4
+pytest -m smoke -n 4  --html=report.html  --self-contained-html 
+
+Keywords:
+pytest -k "TEST_1"
+pytest -k "MyClass and not method"
+pytest -k "TEST_1" --html=report.html  --self-contained-html 
